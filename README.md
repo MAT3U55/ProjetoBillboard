@@ -132,7 +132,7 @@ client_secret
 Preencha esses valores no trecho de autenticação do notebook da API
 Se você deseja apenas reproduzir a análise, pode pular essa etapa.
 
-4.6 Executar o Notebook Principal
+**4.6 Executar o Notebook Principal**
 jupyter notebook v5_base-final.ipynb
 
 As células seguem a ordem:
@@ -144,7 +144,7 @@ Análises estatísticas
 Geração dos gráficos
 Interpretação dos resultados
 
-4.7 Reproduzindo Somente a Análise
+**4.7 Reproduzindo Somente a Análise**
 
 Basta utilizar:
 base_final.xlsx
@@ -152,19 +152,15 @@ v5_base-final.ipynb
 
 O notebook foi estruturado para funcionar integralmente sem a necessidade da API.
 
-5. Considerações Finais
+**5. Considerações Finais**
 
 Este repositório foi organizado para garantir transparência total e reprodutibilidade do estudo.
 Pesquisadores, estudantes e demais interessados podem:
 
 entender todo o processo metodológico
-
 replicar as análises
-
 expandir o estudo para novos períodos ou bases
-
 utilizar o código como referência acadêmica
-
 Este trabalho deu origem a um artigo posteriormente aprovado e publicado em revista científica, contendo:
 
 introdução

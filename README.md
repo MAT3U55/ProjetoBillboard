@@ -1,171 +1,154 @@
-# Projeto Billboard
-1. Objetivo do Estudo
+🎵 Projeto Billboard — Análise do Consumo Musical Antes, Durante e Depois da Pandemia
 
-O estudo buscou responder se o consumo musical, refletido pelos rankings de popularidade e pelas características técnicas das músicas, apresentou mudanças entre três períodos:
+Este repositório reúne todos os arquivos, códigos e bases utilizados para investigar se — e como — o consumo musical mudou ao longo da pandemia.
+A partir da integração entre rankings da Billboard e atributos técnicos fornecidos pela API do Spotify, analisamos padrões que possam refletir transformações sociais impostas pelo período.
 
-Pré-pandemia
-
-Durante a pandemia
-
-Pós-pandemia
-
-Para isso, combinamos dados da Billboard com informações obtidas pela API do Spotify, criando uma base integrada e rica em atributos musicais.
-
-
-
-**2. Estrutura do Repositório**
+📁 Estrutura do Repositório
 /
-├── base_final.xlsx         
-├── v5_base_final.ipynb        
-├── v3_api_spotify.ipynb          
-├── README.md                    
+├── base_final.xlsx                 # Base consolidada com todos os atributos musicais
+├── v5_base_final.ipynb             # Notebook principal de análise
+├── v3_api_spotify.ipynb            # Documentação do processo de coleta via API
+├── README.md                       # Você está aqui :)
 └── arquivos relacionados ao artigo submetido à revista
 
-**Observação importante**
 
-O notebook v3_api_spotify.ipynb é disponibilizado apenas como documentação do processo de coleta.
-A análise completa pode ser reproduzida exclusivamente com:
+Observação importante
+O notebook v3_api_spotify.ipynb está aqui apenas como documentação do processo de coleta.
+Para reproduzir a análise completa, você precisa somente de:
 
-tarbalho_musicas.ipynb
-
+v5_base_final.ipynb
 base_final.xlsx
 
-Ou seja, você não precisa executar a API para reproduzir o estudo, pois toda a base já está pronta.
+Ou seja, não é necessário realizar chamadas à API — a base já está pronta.
 
+**🔍 1. Objetivo do Estudo**
 
+O estudo buscou responder:
+o comportamento musical mudou antes, durante e após a pandemia?
 
-**3. Metodologia**
+Para isso, analisamos três períodos:
+Pré-pandemia
+Pandemia
+Pós-pandemia
 
-A metodologia foi pensada para permitir que qualquer pessoa, mesmo sem familiaridade inicial com o projeto, consiga reproduzir todo o processo.
-Ela está dividida em etapas claras:
+Observando tanto sua presença nos rankings quanto múltiplos atributos musicais (valence, energy, danceability, BPM, modo tonal, duração etc.).
 
+**⚙️ 2. Metodologia**
 
-**3.1 Coleta de Dados (Billboard)**
-Primeiro, coletamos os dados brutos contendo:
+Toda a metodologia foi planejada para ser totalmente reprodutível, clara e documentada. Ela é dividida em quatro grandes etapas:
 
-posição no ranking
-título da música
+**2.1 Coleta de Dados — Billboard**
+
+Inicialmente coletamos informações essenciais sobre cada música presente nos rankings, incluindo:
+posição no chart
+
+título
 artista(s)
-datas de exibição nos charts
+datas de aparição
+período histórico correspondente
 
-informações de contexto necessárias para identificar o período histórico
-Esta etapa forneceu a estrutura inicial do estudo.
+Essa etapa construiu a estrutura central do estudo.
 
-**3.2 Complementação dos Dados (API Spotify)**
+**2.2 Complementação — API do Spotify**
 
+Para enriquecer a análise, consultamos a API do Spotify a partir dos IDs das faixas. Foram coletadas características como:
 
-
-Para enriquecer a base, utilizamos a API do Spotify a partir dos IDs das músicas. Foram coletadas características como:
-
-tempo (BPM)
+BPM (tempo)
 modo (maior/menor)
 duração
 data de lançamento
-atributos técnicos das faixas (energy, danceability, valence etc.)
+atributos técnicos (energy, valence, danceability, acousticness etc.)
 
-Limitações enfrentadas durante a coleta:
+Desafios enfrentados na coleta:
 
-limite de requisições por minuto imposto pela API
-necessidade de adicionar intervalos entre chamadas
-falhas ocasionais e reenvio automático de requisições
-O notebook da API inclui rotinas preparadas para lidar com esses cenários.
+limite de requisições por minuto
+necessidade de introduzir delays
+erros intermitentes da API
+rotina automatizada para reenvio de requisições
+O notebook demonstra como todos esses problemas foram tratados.
 
-**Importante:**
-A coleta foi feita durante o desenvolvimento do estudo, mas agora é apenas demonstrativa neste repositório.
+**2.3 Tratamento da Base**
 
+Com todos os dados reunidos:
 
+padronizamos nomes e formatos
+corrigimos inconsistências
+normalizamos datas
+removemos duplicatas
+analisamos e tratamos entradas incompletas
+classificamos cada música em pré/durante/pós-pandemia
 
-**3.3 Tratamento da Base**
+📌 O resultado final é o arquivo base_final.xlsx.
 
-Após obter todos os dados:
-colunas foram padronizadas
-formatos incorretos foram corrigidos
-datas foram normalizadas
-duplicações e inconsistências foram tratadas
-entradas incompletas foram analisadas e removidas quando necessário
-classificamos cada música como pertencente aos períodos:
-pré-pandemia
-durante a pandemia
-pós-pandemia
-A base final entregue (base_final.xlsx) é o resultado deste processo.
+**2.4 Análises Desenvolvidas**
 
-**3.4 Análises Realizadas**
+O notebook principal traz visualizações e comparações, incluindo:
 
-O notebook apresenta análises como:
-
-evolução temporal das características musicais
+evolução temporal de atributos musicais
 comparação entre períodos
-análise do comportamento dos rankings
-distribuição de atributos musicais ao longo dos estágios da pandemia
-visualizações e gráficos comparativos
-Essa etapa culminou nos resultados utilizados no artigo aprovado para publicação.
+comportamento dos rankings ao longo do tempo
+distribuição de variáveis técnicas (valence, energy etc.)
+gráficos e análises estatísticas
+Os resultados apresentados originaram o artigo enviado e aprovado por revista científica.
 
+**▶️ 3. Como Reproduzir o Estudo**
+**3.1 Pré-requisitos**
 
-
-**4. Como Reproduzir o Estudo**
-
-A seguir, um passo a passo claro e objetivo para reproduzir a análise.
-
-**4.1 Pré-requisitos**
-
-**Python 3.8 ou superior**
-**pip instalado**
+**Python 3.8+**
+**pip**
 **Jupyter Notebook ou JupyterLab**
-(Opcional) Conta no Spotify for Developers — apenas se desejar testar a API
+Conta no Spotify for Developers — apenas para testar o notebook de coleta
 
-**4.2 Clonar o Repositório**
+**3.2 Clonar o Repositório**
 git clone https://github.com/seuusuario/seurepositorio.git
 cd seurepositorio
 
-**4.5 Configurar Credenciais da API do Spotify (Opcional)**
+**3.3 (Opcional) Configurar a API do Spotify**
 
-**Somente necessário se você quiser executar o notebook de API.**
+Caso deseje reproduzir a coleta:
 
-Acesse https://developer.spotify.com
+Acesse: https://developer.spotify.com
 Crie um aplicativo
+Obtenha seu client_id e client_secret
+Insira no notebook v3_api_spotify.ipynb
+Se o objetivo for somente analisar, pode ignorar esta etapa.
 
-Obtenha:
-
-client_id
-client_secret
-
-Preencha esses valores no trecho de autenticação do notebook da API
-Se você deseja apenas reproduzir a análise, pode pular essa etapa.
-
-**4.6 Executar o Notebook Principal**
+**3.4 Executar o Notebook Principal**
 jupyter notebook v5_base-final.ipynb
 
-As células seguem a ordem:
 
-Importação de bibliotecas
-Carregamento da base final
-Tratamento e preparação
-Análises estatísticas
+A ordem lógica do notebook:
+
+Importação das bibliotecas
+Carregamento da base_final.xlsx
+Tratamentos e verificações
+Análises comparativas
 Geração dos gráficos
-Interpretação dos resultados
+Discussão dos resultados
 
-**4.7 Reproduzindo Somente a Análise**
+**3.5 Reproduzir Apenas a Análise**
 
-Basta utilizar:
+Use apenas:
+
 base_final.xlsx
 v5_base-final.ipynb
+Sem necessidade de API.
 
-O notebook foi estruturado para funcionar integralmente sem a necessidade da API.
+**📝 4. Considerações Finais**
 
-**5. Considerações Finais**
+Este projeto foi estruturado para garantir transparência, clareza e total reprodutibilidade para pesquisadores e interessados.
+Aqui, você pode:
 
-Este repositório foi organizado para garantir transparência total e reprodutibilidade do estudo.
-Pesquisadores, estudantes e demais interessados podem:
+compreender detalhadamente toda a metodologia
+reproduzir os resultados
+adaptar o estudo para outros períodos ou gêneros musicais
+usar o código como referência acadêmica
 
-entender todo o processo metodológico
-replicar as análises
-expandir o estudo para novos períodos ou bases
-utilizar o código como referência acadêmica
-Este trabalho deu origem a um artigo posteriormente aprovado e publicado em revista científica, contendo:
+O material deste repositório originou um artigo científico contendo:
 
 introdução
 fundamentação teórica
 metodologia
-análise dos resultados
+resultados
 discussão
 conclusão

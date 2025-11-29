@@ -16,7 +16,7 @@ Para isso, combinamos dados da Billboard com informações obtidas pela API do S
 **2. Estrutura do Repositório**
 /
 ├── base_final.xlsx         
-├── tarbalho_musicas.ipynb        
+├── v5_base_final.ipynb        
 ├── v3_api_spotify.ipynb          
 ├── README.md                    
 └── arquivos relacionados ao artigo submetido à revista

@@ -138,47 +138,35 @@ cd seurepositorio
 
 4.5 Configurar Credenciais da API do Spotify (Opcional)
 
-Somente necessário se você quiser executar o notebook de API.
+**Somente necessário se você quiser executar o notebook de API.**
 
 Acesse https://developer.spotify.com
-
 Crie um aplicativo
-
 Obtenha:
 
 client_id
-
 client_secret
 
 Preencha esses valores no trecho de autenticação do notebook da API
-
 Se você deseja apenas reproduzir a análise, pode pular essa etapa.
 
 4.6 Executar o Notebook Principal
-jupyter notebook tarbalho_musicas.ipynb
-
+jupyter notebook v5_base-final.ipynb
 
 As células seguem a ordem:
 
 Importação de bibliotecas
-
 Carregamento da base final
-
 Tratamento e preparação
-
 Análises estatísticas
-
 Geração dos gráficos
-
 Interpretação dos resultados
 
 4.7 Reproduzindo Somente a Análise
 
 Basta utilizar:
-
 base_final.xlsx
-
-tarbalho_musicas.ipynb
+v5_base-final.ipynb
 
 O notebook foi estruturado para funcionar integralmente sem a necessidade da API.
 
@@ -198,13 +186,8 @@ utilizar o código como referência acadêmica
 Este trabalho deu origem a um artigo posteriormente aprovado e publicado em revista científica, contendo:
 
 introdução
-
 fundamentação teórica
-
 metodologia
-
 análise dos resultados
-
 discussão
-
 conclusão

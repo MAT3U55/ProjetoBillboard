@@ -152,3 +152,8 @@ metodologia
 resultados
 discussão
 conclusão
+
+
+**🎓 Publicação e Reconhecimento**
+
+Parte deste estudo — incluindo metodologia, análises e visualizações — foi submetida e aceita para apresentação em congresso, destacando a relevância científica e o rigor acadêmico do trabalho desenvolvido.

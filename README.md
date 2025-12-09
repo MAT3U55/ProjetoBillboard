@@ -157,3 +157,6 @@ conclusão
 **🎓 Publicação e Reconhecimento**
 
 Parte deste estudo — incluindo metodologia, análises e visualizações — foi submetida e aceita para apresentação em congresso, destacando a relevância científica e o rigor acadêmico do trabalho desenvolvido.
+
+
+<img width="765" height="759" alt="image" src="https://github.com/user-attachments/assets/b09d0ffe-6725-48e1-be50-a7e018ad6634" />
